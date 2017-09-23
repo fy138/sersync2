@@ -61,7 +61,8 @@ ASFLAGS=
 
 # Link Libraries and Options
 # LDLIBSOPTIONS=-Llib -L/usr/local/lib -static -lboost_thread -lboost_regex -lboost_date_time -lpthread
-LDLIBSOPTIONS=-Llib -L/lib64 -L/usr/lib64 -L/usr/local/lib -lboost_thread -lboost_regex -lboost_system -lboost_date_time -lpthread 
+#LDLIBSOPTIONS=-Llib -L/lib64 -L/usr/lib64 -L/usr/local/lib -lboost_thread -lboost_regex -lboost_system -lboost_date_time -lpthread 
+LDLIBSOPTIONS=-Llib -L/lib64 -L/usr/lib64 -L/usr/local/lib -lboost_thread -lboost_regex -lboost_system -lboost_date_time -lpthread -static -lrt -static-libgcc -static-libstdc++
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
