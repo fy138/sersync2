@@ -44,6 +44,11 @@ $ make
 $ make clean
 ```
 
+cannot find -lm问题的症结在：编译的时候用了“-static” || “-fast”选项
+那么为什么出现这个问题呢？因为现在的linux中没有静态c库。
+解决办法也很简单：装一个glibc-static就好了
+
+以CentOS为例：yum install glibc-static
 ## 使用方法
 
 目前不想写这个, 网上有很多相关教程, 请自行搜索.
